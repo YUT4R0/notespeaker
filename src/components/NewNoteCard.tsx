@@ -49,7 +49,7 @@ export function NewNoteCard({ onNoteCreated }: Props) {
 
     speechRecognition.lang = "pt-BR";
     speechRecognition.continuous = true;
-    speechRecognition.maxAlternatives = 1;
+    speechRecognition.maxAlternatives = 5;
     speechRecognition.interimResults = true;
 
     speechRecognition.onresult = (event) => {
@@ -82,7 +82,7 @@ export function NewNoteCard({ onNoteCreated }: Props) {
       </Dialog.Trigger>
       <Dialog.Portal>
         <Dialog.Overlay className="inset-0 fixed bg-black/50" />
-        <Dialog.Content className="fixed left-1/2 top-1/2 bg-slate-700 rounded-md -translate-x-1/2 -translate-y-1/2 max-w-[40rem] w-full flex flex-col outline-none h-[60vh] overflow-hidden">
+        <Dialog.Content className="fixed md:left-1/2 md:top-1/2 bg-slate-700 md:rounded-md md:-translate-x-1/2 md:-translate-y-1/2 md:max-w-[40rem] w-full flex flex-col outline-none md:h-[60vh] overflow-hidden sm:inset-0 md:inset-auto">
           <Dialog.Close className="absolute right-0 top-0 bg-slate-800 p-1.5 text-slate-400">
             <X className="size-5 hover:text-slate-100" />
           </Dialog.Close>
